@@ -47,7 +47,17 @@
 	rgb(136, 96, 208)
 }
 
-.tabs,
+.tabs {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	position: relative;
+	text-align: center;
+	padding: 0 2em;
+}
+
 .slide {
 	display: flex;
 	flex-direction: column;
@@ -57,7 +67,6 @@
 	position: relative;
 	text-align: center;
 	padding: 0 2em;
-
 }
 
 .tabs-container {
@@ -120,78 +129,3 @@
 		font-size: 1rem;
 	}
 }
-
-/* 
-body {
-	padding-top: 112px;
-}
-
-header {
-	height: 112px;
-	background: rgba(211, 230, 249, 0.7);
-	top: 0px;
-	left: 0px;
-	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	padding: 30px 10%;
-	width: 100%;
-	position: fixed;
-	z-index: 1000;
-} */
-
-/* .logo {
-	margin-right: auto;
-	cursor: pointer;
-	height: 52px;
-}
-
-.nav__links {
-	list-style: none;
-}
-
-.nav__links li {
-	display: inline-block;
-	padding: 0px 20px;
-}
-
-.nav__links li a {
-	transition: all 0.3s ease 0s;
-}
-
-.nav__links li a:hover {
-	
-	color: rgba(28,40,90,1);
-} */
-
-/* button.contact {
-	margin-left: 50px;
-	padding: 9px 25px;
-	color: rgba(255,255,255,1);
-	background-color: rgba(28,40,90,1);
-	border: none;
-	border-radius: 50px;
-	cursor: pointer;
-	transition: all 0.3s ease 0s;
-}
-
-button.contact:hover {
-	background-color: rgba(28,40,90,0.7);
-} */
-
-/* h1 {
-	font-size: 64px;
-} */
-
-/* Основная часть домашней страницы */
-
-/* .main {
-	display: grid;
-	grid-template-columns: 50% 50%;
-}
-
-.notebook img {
-	width: 100%;
-} */
