@@ -8,8 +8,12 @@ class StickyNavigation {
 		$('.tab').click(function() { 
 			self.onTabClick(event, $(this)); 
 		});
-		$(window).scroll(() => { this.onScroll(); });
-		$(window).resize(() => { this.onResize(); });
+		$(window).scroll(() => {
+			this.onScroll();
+		});
+		$(window).resize(() => {
+			this.onResize();
+		});
 	}
 	
 	onTabClick(event, element) {
