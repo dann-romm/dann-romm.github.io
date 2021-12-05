@@ -6,10 +6,12 @@
 	padding: 0;
 	font-family: "Montserrat", sans-serif;
 	font-weight: 500;
-	font-size: 16px;
 	text-decoration: none;
 }
 
+.main {
+	background: linear-gradient(225deg, rgb(47, 112, 202), rgb(183, 111, 255) 44%, rgb(234, 244, 255) 98%);
+}
 
 .notebook-image {
 	width: max(100vh, 100vw);
@@ -60,6 +62,7 @@
 }
 
 .tabs-container {
+	white-space: nowrap;
 	display: flex;
 	flex-direction: row;
 	position: absolute;
@@ -67,7 +70,7 @@
 	width: 100%;
 	height: 70px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-	background: rgba(136, 98, 208, 0.5);
+	background: rgba(193,200,228, 0.7);
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 	z-index: 10;
@@ -104,21 +107,7 @@
 	transition: left 0.3s ease;
 }
 
-@media (min-width: 800px) {
-	.tabs,
-	.slide h1 {
-		font-size: 3rem;
-	}
-
-	.tabs,
-	.slide h1 {
-		font-size: 1rem;
-	}
-
-	.tab {
-		font-size: 1rem;
-	}
-}
+/* _______________________________ */
 
 .slide {
 	display: flex;
@@ -129,7 +118,6 @@
 	position: relative;
 	text-align: center;
 	padding: 0;
-	background: rgb(193, 200, 228);
 }
 
 .space-holder {
@@ -139,7 +127,7 @@
 
 .sticky {
 	top: 0;
-	/* position: sticky; */
+	position: sticky;
 	height: 100vh;
 	width: 100%;
 	overflow-x: hidden;
@@ -163,15 +151,16 @@
 .general-card {
 	max-width: 360px;
 	position: relative;
-	padding: 2rem;
+	padding: 50px;
 	border-radius: 15px;
 	margin-left: 5rem;
+	transition: left 0.5s ease;
 }
 
-.general-card#intro {
+.general-card {
 	width: 30vw;
-	min-width: 300px;
-	height: 22rem;
+	min-width: 200px;
+	height: 18rem;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 	background: rgba(255,255,255, 0.5);
 	-webkit-backdrop-filter: blur(10px);
@@ -179,7 +168,13 @@
 	text-align: left;
 }
 
-.general-card#intro h3 {
+.general-card p {
+	max-width: 300px;
+	min-width: 200px;
+	margin-bottom: 0.5rem;
+}
+
+.general-card h3 {
 	margin-top: 0;
 	margin-bottom: 0.5rem;
 	font-size: 1.2rem;
@@ -189,4 +184,109 @@
 .general-card a {
 	cursor: pointer;
 	color: rgb(136, 96, 208);
+}
+
+/* _______________________________ */
+
+.vscode-img {
+	max-height: 65vw;
+}
+
+.vscode-header {
+	align-self: left;
+	position: absolute;
+	top: 40px;
+	width: 50%;
+}
+
+.vscode-header {
+	font-size: min(10vw, 50px);
+}
+
+.vscode-img .animate {
+	margin-left: 50%;
+	width: 50%;
+	height: auto;
+}
+
+@keyframes fade-animation {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes enter-animation {
+	from {
+		margin-left: -70px;
+		opacity: 0;
+	}
+	to {
+		margin-left: 0;
+		opacity: 1;
+	}
+}
+
+@media (max-height: 400px) {
+	.vscode-img {
+		opacity: 0;
+	}
+}
+
+@media (max-width: 720px) {
+	.vscode-img .animate {
+		/* width: 100%; */
+		height: 80%;
+		margin-top: 10%;
+		margin-left: 0;
+	}
+	.vscode-header {
+		/* TODO */
+	}
+}
+
+.vscode-img .to-animate {
+	animation: fade-animation 1s 1;
+}
+
+.vscode-header .to-animate {
+	animation: enter-animation 1s 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 800px) {
+	.tabs,
+	.slide h1 {
+		font-size: 3rem;
+	}
+
+	.tabs,
+	.slide h1 {
+		font-size: 1rem;
+	}
+
+	.tab {
+		font-size: 1rem;
+	}
+}
+
+@media (min-width: 950px) {
+	.general-card {
+		height: 11rem;
+	}
 }
