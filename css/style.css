@@ -347,12 +347,3 @@
 } */
 
 /* _______________________________ */
-
-.footer {
-	display: block;
-	position: absolute;
-	bottom: 0;
-	height: 200px;
-	width: 100%;
-	background-color: rgba(105, 105, 105, 0.9);
-}
