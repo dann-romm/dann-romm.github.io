@@ -1,5 +1,5 @@
-class StickyNavigation {
-  
+class Navigation {
+
 	constructor() {
 		this.currentId = null;
 		this.currentTab = null;
@@ -35,7 +35,7 @@ class StickyNavigation {
 	
 	checkTabContainerPosition() {
 		let offset = $('.tabs').offset().top + $('.tabs').height() - this.tabContainerHeight;
-		if($(window).scrollTop() > offset) {
+		if ($(window).scrollTop() > offset) {
 			$('.tabs-container').addClass('tabs-container--top');
 		}
 		else {
@@ -51,12 +51,12 @@ class StickyNavigation {
 			let id = $(this).attr('href');
 			let offsetTop = $(id).offset().top - self.tabContainerHeight;
 			let offsetBottom = $(id).offset().top + $(id).height() - self.tabContainerHeight;
-			if($(window).scrollTop() > offsetTop && $(window).scrollTop() < offsetBottom) {
-			newCurrentId = id;
-			newCurrentTab = $(this);
+			if ($(window).scrollTop() > offsetTop && $(window).scrollTop() < offsetBottom) {
+				newCurrentId = id;
+				newCurrentTab = $(this);
 			}
 		});
-		if(this.currentId != newCurrentId || this.currentId === null) {
+		if (this.currentId != newCurrentId || this.currentId === null) {
 			this.currentId = newCurrentId;
 			this.currentTab = newCurrentTab;
 			this.setSliderCss();
@@ -66,7 +66,7 @@ class StickyNavigation {
 	setSliderCss() {
 		let width = 0;
 		let left = 0;
-		if(this.currentTab) {
+		if (this.currentTab) {
 			width = this.currentTab.css('width');
 			left = this.currentTab.offset().left;
 		}
@@ -76,4 +76,4 @@ class StickyNavigation {
 	
 }
 
-new StickyNavigation();
+new Navigation();
