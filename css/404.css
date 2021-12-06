@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
+
+* {
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", sans-serif;
+}
+
+.error-container {
+	top: 10%;
+	position: relative;
+	text-align: center;
+	font-size: 190px;
+	font-weight: 800;
+	color: rgba(255,255,255,0.5);
+	text-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.error-container span {
+	display: inline-block;
+	line-height: 0.7;
+	position: relative;
+}
+.error-container span span {
+	display: inline-block;
+	position: relative;
+}
+.error-container span#_1 {
+	perspective: 1000px;
+	perspective-origin: 500% 50%;
+}
+
+.error-container span#_1 span {
+	transform-origin: 50% 100% 0px;
+	transform: rotateX(0);
+	animation: first-letter 7s infinite;
+}
+
+.error-container span#_3 {
+	perspective: none;
+	perspective-origin: 50% 50%;
+}
+.error-container span#_3 span {
+	transform-origin: 100% 100% 0px;
+	transform: rotate(0deg);
+	animation: second-latter 7s infinite;
+}
+@keyframes first-letter {
+	0% {
+		transform: rotateX(0);
+	}
+	8% {
+		transform: rotateX(210deg);
+	}
+	12% {
+		transform: rotateX(150deg);
+	}
+	16% {
+		transform: rotateX(200deg);
+	}
+	18% {
+		transform: rotateX(170deg);
+	}
+	20% {
+		transform: rotateX(185deg);
+	}
+	21% {
+		transform: rotateX(177deg);
+	}
+	25% {
+		transform: rotateX(182deg);
+	}
+	60% {
+		transform: rotateX(180deg);
+	}
+	80% {
+		transform: rotateX(0);
+	}
+	100% {
+		transform: rotateX(0);
+	}
+}
+
+@keyframes second-latter {
+	0% {
+		transform: rotate(0);
+	}
+	10% {
+		transform: rotate(30deg);
+	}
+	15% {
+		transform: rotate(90deg);
+	}
+	70% {
+		transform: rotate(90deg);
+	}
+	80% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotateX(0);
+	}
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: linear-gradient(225deg, rgb(47, 112, 202), rgb(183, 111, 255) 44%, rgb(234, 244, 255) 98%);
+	height: 100vh;
+	color: rgb(0, 24, 85);
+}
+
+h1 {
+	position: relative;
+	text-align: center;
+	top: 5%;
+}
+
+.description {
+	position: relative;
+	top: 7%;
+	padding: 25px 10px 25px 10px;
+	background-color: rgba(255,255,255,0.7);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	max-width: 400px;
+	margin: 30px auto 30px;
+	font-size: 19px;
+	text-align: center;
+	border-radius: 15px;
+}
+
+a {
+	cursor: pointer;
+	color: rgb(136, 96, 208);
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+
+@media (max-width: 800px) {
+	.error-container {
+		font-size: 135px;
+	}
+}
+
+@media (max-width: 550px) {
+	.error-container {
+		font-size: 190px;
+		display: flex;
+		flex-direction: column;
+	}
+	.error-container span#_1 span {
+		transform-origin: 100% 100% 0px;
+		transform: rotate(0deg);
+		animation: second-latter 6s infinite;
+	}
+	.error-container span#_3 span {
+		animation-delay: 1.5s;
+	}
+}

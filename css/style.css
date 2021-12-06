@@ -188,25 +188,34 @@
 
 /* _______________________________ */
 
-.vscode-img {
+.tab-img {
 	max-height: 65vw;
 }
 
-.vscode-header {
+.tab-header {
 	align-self: left;
 	position: absolute;
 	top: 40px;
 	width: 50%;
 }
 
-.vscode-header {
+.tab-header {
 	font-size: min(10vw, 50px);
+	white-space: nowrap;
 }
 
-.vscode-img .animate {
+.tab-img .animate {
 	margin-left: 50%;
 	width: 50%;
 	height: auto;
+}
+
+.tab-img div {
+	text-align: justify;
+	position: absolute;
+	width: 47%;
+	padding-left: 3%;
+	margin-top: 5%;
 }
 
 @keyframes fade-animation {
@@ -230,28 +239,29 @@
 }
 
 @media (max-height: 400px) {
-	.vscode-img {
+	.tab-img {
 		opacity: 0;
 	}
 }
 
 @media (max-width: 720px) {
-	.vscode-img .animate {
-		/* width: 100%; */
-		height: 80%;
+	.tab-img .animate {
+		width: 100%;
 		margin-top: 10%;
 		margin-left: 0;
 	}
-	.vscode-header {
-		/* TODO */
+	.tab-img div {
+		top: 12%;
+		width: 95vw;
+		font-size: 12px;
 	}
 }
 
-.vscode-img .to-animate {
-	animation: fade-animation 1s 1;
+.tab-img .to-animate {
+	animation: fade-animation 2s 1;
 }
 
-.vscode-header .to-animate {
+.tab-header .to-animate {
 	animation: enter-animation 1s 1;
 }
 
