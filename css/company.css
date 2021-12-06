@@ -398,13 +398,24 @@
 	font-size: 3rem;
 }
 
-
-
-.footer {
-	display: block;
+#tab-other iframe {
 	position: absolute;
-	bottom: 0;
-	height: 200px;
-	width: 100%;
-	background-color: rgba(105, 105, 105, 0.9);
+	left: 50%;
+	width: 50%;
+	height: calc(100% - 355px);
+	top: 70px;
+	border-radius: 20px;
+}
+
+.location-header {
+	position: absolute;
+	left: 0;
+	top: 70px;
+	width: 50%;
+	height: calc(100% - 320px - 100vw * 0.05);
+}
+
+.location-header p {
+	padding-top: 20%;
+	font-size: 4rem;
 }
