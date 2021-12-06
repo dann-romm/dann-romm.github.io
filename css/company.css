@@ -51,7 +51,6 @@
 	flex-direction: row;
 	position: absolute;
 
-	/* bottom: 0; */
 	top: 70px;
 
 	width: 100%;
@@ -61,10 +60,15 @@
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 	z-index: 10;
+
+	visibility: hidden;
+	color: rgb(0,0,0,0)
 }
 
 .tabs-container--top {
 	position: fixed;
+	visibility: visible;
+	color: rgb(0, 24, 85);
 	top: 0;
 }
 
@@ -73,14 +77,15 @@
 	justify-content: center;
 	align-items: center;
 	flex: 1;
-	color: rgb(0, 24, 85);
+	color: currentColor;
 	letter-spacing: 0.1rem;
 	transition: all 0.5s ease;
+	transition: color 0s;
 	font-size: 0.8rem;
 }
 
 .tab:hover {
-	color:white;
+	color: white;
 	background: rgba(86, 128, 233, 1);
 	transition: all 0.5s ease;
 }
@@ -99,7 +104,32 @@
 .menu {
 	height: 70px;
 	width: 100vw;
-	
+
+	white-space: nowrap;
+	display: flex;
+	flex-direction: row;
+
+	background: rgba(193,200,228, 0.7);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	z-index: 10;
+}
+
+.menu-tab {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	color: rgb(0, 24, 85);
+	letter-spacing: 0.1rem;
+	transition: all 0.5s ease;
+	font-size: 0.8rem;
+}
+
+.menu-tab:hover {
+	color:white;
+	background: rgba(86, 128, 233, 1);
+	transition: all 0.5s ease;
 }
 
 .slide {
