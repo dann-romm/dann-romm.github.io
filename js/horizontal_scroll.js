@@ -16,7 +16,7 @@ $(document).ready(function(){
 		horizontal.style.transform = "translateX(-" + sticky.offsetTop + "px)";
 	});
 
-		window.addEventListener('resize', () => {
+	window.addEventListener('resize', () => {
 		spaceHolder.style.height = calcDynamicHeight(horizontal) + "px";
 	});
 });

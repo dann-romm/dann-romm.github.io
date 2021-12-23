@@ -195,14 +195,16 @@
 
 .tab-header {
 	align-self: left;
+	color: aliceblue;
 	position: absolute;
 	top: 40px;
 	width: 50%;
+	font-size: min(4vw, 60px);
+	white-space: nowrap;
 }
 
-.tab-header {
-	font-size: min(10vw, 50px);
-	white-space: nowrap;
+.tab-header#other {
+	margin-top: 70px;
 }
 
 .tab-img .animate {
@@ -212,11 +214,20 @@
 }
 
 .tab-img div {
+	font-size: min(2vw, 30px);
 	text-align: justify;
 	position: absolute;
 	width: 47%;
 	padding-left: 3%;
 	margin-top: 5%;
+}
+
+#conclusion {
+	position: absolute;
+	margin-left: 20px;
+	margin-right: 20px;
+	left: 0;
+	font-size: large;
 }
 
 @keyframes fade-animation {
