@@ -367,6 +367,35 @@
 	
 }
 
+#tab-genereal h1 {
+	position: absolute;
+	top: 5%;
+	white-space: nowrap;
+	font-size: 3rem;
+}
+
+#tab-other iframe {
+	position: absolute;
+	left: 50%;
+	width: 45%;
+	height: calc(100% - 355px - 15%);
+	top: calc(70px + 10%);
+	border-radius: 25px;
+}
+
+.location-header {
+	position: absolute;
+	left: 0;
+	top: 70px;
+	width: 50%;
+	height: calc(100% - 320px - 100vw * 0.05);
+}
+
+.location-header p {
+	padding-top: 20%;
+	font-size: 2rem;
+}
+
 @media (min-width: 800px) {
 	.tabs,
 	.slide h1 {
@@ -389,33 +418,8 @@
 	}
 }
 
-/* _______________________________ */
-
-#tab-genereal h1 {
-	position: absolute;
-	top: 5%;
-	white-space: nowrap;
-	font-size: 3rem;
-}
-
-#tab-other iframe {
-	position: absolute;
-	left: 50%;
-	width: 50%;
-	height: calc(100% - 355px);
-	top: 70px;
-	border-radius: 20px;
-}
-
-.location-header {
-	position: absolute;
-	left: 0;
-	top: 70px;
-	width: 50%;
-	height: calc(100% - 320px - 100vw * 0.05);
-}
-
-.location-header p {
-	padding-top: 20%;
-	font-size: 4rem;
+@media (min-width: 1050px) {
+	.location-header p {
+		font-size: 4rem;
+	}
 }

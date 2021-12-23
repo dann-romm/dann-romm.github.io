@@ -1,6 +1,11 @@
 .footer {
 	color: rgb(224, 224, 224);
-	display: table;
+
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+
 	position: absolute;
 	bottom: 0;
 	height: 250px;
@@ -10,27 +15,14 @@
 }
 
 .footer-section {
-	display: table-cell;
 	height: 260px;
+	width: 30%;
 }
+
 
 .footer-section a {
 	color: rgb(224, 224, 224);
 }
-
-.footer-section#description {
-	width: 33%;
-}
-.footer-section#contact-us {
-	width: 33%;
-}
-.footer-section#site-map {
-	width: 34%;
-}
-
-
-
-
 
 .footer-section#site-map ul {
 	text-align: left;
@@ -61,4 +53,10 @@
 
 .contact-icon {
 	width: 40px;
+}
+
+@media all and (max-width: 500px) {
+	.footer {
+		flex-direction: column;
+	}
 }
