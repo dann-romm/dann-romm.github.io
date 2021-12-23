@@ -393,7 +393,7 @@
 
 .location-header p {
 	padding-top: 20%;
-	font-size: 2rem;
+	font-size: 1rem;
 }
 
 @media (min-width: 800px) {
@@ -415,6 +415,12 @@
 @media (min-width: 950px) {
 	.general-card {
 		height: 11rem;
+	}
+}
+
+@media (min-width: 560px) {
+	.location-header p {
+		font-size: 2rem;
 	}
 }
 
